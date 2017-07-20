@@ -1,0 +1,18 @@
+1. copy 'sqoop-1.4.6.bin__hadoop-2.0.4-alpha.tar.gz' file into '/home/iwinner/work' folder
+
+2. extract 'sqoop-1.4.6.bin__hadoop-2.0.4-alpha.tar.gz' file into '/home/iwinner/work' folder
+
+3. update '~/.bashrc' file with below changes
+
+command: gedit ~/.bashrc
+
+export SQOOP_HOME=/home/iwinner/work/sqoop-1.4.6.bin__hadoop-2.0.4-alpha
+export PATH=$SQOOP_HOME/bin:$PATH
+
+4. re-open the terminal
+	
+5. verify with below command
+	
+echo $SQOOP_HOME
+
+6. execute the sqoop commands

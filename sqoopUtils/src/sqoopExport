@@ -1,0 +1,161 @@
+https://acadgild.com/blog/exporting-files-hdfs-mysql-using-sqoop/
+
+HDFS File Data:
+
+1201, gopal,     manager, 50000, TP
+1202, manisha,   preader, 50000, TP
+1203, kalil,     php dev, 30000, AC
+1204, prasanth,  php dev, 30000, AC
+1205, kranthi,   admin,   20000, TP
+1206, satish p,  grp des, 20000, GR
+
+Need to Export to HDFS to RDBMS
+
+Table In DB:
+ CREATE TABLE employee ( 
+   id INT NOT NULL PRIMARY KEY, 
+   name VARCHAR(20), 
+   deg VARCHAR(20),
+   salary INT,
+   dept VARCHAR(10));
+   
+   
+   Sqoop Export QUery
+   
+   $ sqoop export \
+      --connect jdbc:mysql://localhost/db \
+	  --username root \
+	  --table employee \ 
+      --export-dir /emp/emp_data
+      
+===============================================
+
+Export the input.txt and input2.txt file from HDFS to MySQL
+
+Table : Create a table named acad.
+
+USE db1;
+
+CREATE TABLE acad (
+
+emp_id int(2),
+
+emp_name varchar(10),
+
+emp_sal int(10),
+
+date date);
+
+
+sqoop export \
+ –-connect jdbc:mysql://localhost/db1 \
+ -–username sqoop \
+ -–password root \
+ -–table acad \
+ -–export-dir /sqoop_msql/ \
+   -m 1      
+ ===========================================================================
+ 
+  EXPORT DATA FROM `HDFS` TO `RDBMS TABLE` with 'update-mode'
+-----------------------------------------------------
+sqoop export \
+  --connect "jdbc:mysql://localhost:3306/abc" \
+  --username root \
+  --password hadoop \
+  --table departments \
+  --export-dir /sqoop/abbs.db/departments_stage \
+  --batch \
+  --outdir java_files \
+  -m 1 \
+  --update-key department_id \
+  --update-mode updateonly
+
+sqoop export \
+  --connect "jdbc:mysql://localhost:3306/abc" \
+  --username root \
+  --password hadoop \
+  --table departments \
+  --export-dir /sqoop/abc.db/departments_stage \
+  --batch \
+  --outdir java_files \
+  -m 1 \
+  --update-key department_id \
+  --update-mode allowinsert
+  
+  
+  
+  sqoop export -D oraoop.disabled=true  \
+--connect jdbc:abc://xxxxxxxxxxx:5480/PPSS \
+--username mchetl \
+--password-file /password/jjss.password \
+--table uji  \
+--export-dir traiing 
+  
+  
+  NOTE : --batch 
+  --batch
+  
+  •	Instead we can specify an additional parameter with which data is exported faster. The additional parameter being,
+  •	Batch parameter creates insert statements for multiple rows at a time instead of having separate insert statements for each row something like
+  •	Not all databases support multiple row inserts in a single insert statement. Only Oracle, MYSQL and PostgreSQL support this feature
+  •	So, this parameter should be used based on the database that we are trying to export  
+  
+  
+  Sqoop: Export Statements per statement
+•	Another option to insert the data from Hadoop to database is to specify number of records that will be used for each insert statement using the property
+-Dsqoop.export.records.per.statement
+  
+  
+  Sqoop: Export records per transaction
+•	We can also specify number of records that can be inserted in a single insert statement by using the property,
+-Dsqoop.export.records.per.transaction
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
