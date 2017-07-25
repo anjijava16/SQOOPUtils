@@ -1,0 +1,7 @@
+@RequestMapping(value = "/codeChecking",
+			method = RequestMethod.POST,
+			consumes = MediaType.APPLICATION_JSON_VALUE,
+			produces = MediaType.APPLICATION_JSON_VALUE)
+	@ResponseBody
+	public  AppCodeResponseForm CodeChecking(
+		
