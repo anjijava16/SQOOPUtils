@@ -152,5 +152,5 @@ hdfs dfs -rm -R /user/cloudera/sqoop_merge/departments
 * rename dir ‘/user/cloudera/sqoop_merge/staging’ to ‘/user/cloudera/sqoop_merge/departments’
 hdfs dfs -mv /user/cloudera/sqoop_merge/staging /user/cloudera/sqoop_merge/departments
 
-#References:
+# References:
 https://sqoop.apache.org/docs/1.4.2/SqoopUserGuide.html
