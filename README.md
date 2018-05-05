@@ -1,3 +1,8 @@
+# Below URL for Sqoop On Spark 
+
+https://github.com/anjijava16/sqoop-on-spark.git
+
+# ========================================================================================
 Here we will discuss all possible sqoop command line options to import and export data between HDFS and RDBMS, import/export delimiters, incremental load and sqoop job/merge operations.
 
 For practice, I downloaded the cloudera VM from http://www.cloudera.com/downloads/quickstart_vms/5-8.html
